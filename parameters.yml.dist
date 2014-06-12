@@ -1,0 +1,10 @@
+# rbackup parameters file
+
+database:
+    user: xxxxxx
+    password: xxxxxx
+aws:
+    access_key_id: xxxxxx
+    secret_access_key: xxxxxx
+    bucket_name: xxxxxx
+backup_dir: backupfiles
