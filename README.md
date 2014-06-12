@@ -1,6 +1,11 @@
 # rBackup
 
-Ruby script to backup project folders and mysql databases, and upload to S3 storage
+Ruby script to backup project folders and mysql databases, and upload to S3 storage. 
+
+Works well with PHP projects where you don't need to backup the full
+project directory, but there are multiple "static" folders that do. Also
+allows backup of multiple mysql databases and creates tgz archives of
+each folder and database separately.
 
 ## Installation
 
@@ -55,11 +60,11 @@ placed on the local host.
 
     ruby rbackup.rb <projectname> <projectpath> <folders> <databases>
 
-* Project name is a unique identifier for the project you are backing up
-* Project path is the root level path of the project to be backed up
-* folders is a comma separated list of folders relative to the project
+* `projectname` is a unique identifier for the project you are backing up
+* `projectpath` is the root level path of the project to be backed up
+* `folders` is a comma separated list of folders relative to the project
   path
-* Databases is a comma separated list of database names to be backed up
+* `databases` is a comma separated list of database names to be backed up
 
 Important: In case there are issues with file permissions it is safest
 to run the command as root. This means putting the command in the root
@@ -76,3 +81,10 @@ Backing up 2 project folders and 2 mysql databases:
 
     ruby rbackup.rb projectname /var/www/projectfolder shared,static projectdb,otherdb
 
+## Contributing
+
+Feel free!
+
+## Credits
+
+Created by gezpage
